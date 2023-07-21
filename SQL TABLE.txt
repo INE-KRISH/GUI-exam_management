@@ -1,0 +1,25 @@
+mysql> use project;
+Database changed
+
+mysql> create table REG2(rollno int not null auto_increment, StName varchar(30) not null, FName varchar(30) not null, MName varchar(30) not null, Gender varchar(6) not null, DOB varchar(30) not null,SName varchar(30) not null,
+    -> PRIMARY KEY(rollno));
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> desc stu;
++--------+-------------+------+-----+---------+----------------+
+| Field  | Type        | Null | Key | Default | Extra          |
++--------+-------------+------+-----+---------+----------------+
+| rollno | int         | NO   | PRI | NULL    | auto_increment |
+| StName | varchar(30) | YES  |     | NULL    |                |
+| FName  | varchar(30) | YES  |     | NULL    |                |
+| MName  | varchar(30) | YES  |     | NULL    |                |
+| Gender | varchar(6)  | YES  |     | NULL    |                |
+| SName  | varchar(30) | YES  |     | NULL    |                |
++--------+-------------+------+-----+---------+----------------+
+6 rows in set (0.01 sec)
+
+mysql> create table marks1(English int not null, Maths int not null, Physics int not null, Chemistry int not null, IP int not null,Total int not null,Percentage int not null, Percentile int not null, rollno int not null, FOREIGN KEY(rollno) REFERENCES reg(rollno));
+Query OK, 0 rows affected (0.11 sec)
+
+
+create table T_ID(username varchar(60), password varchar(30)); 
